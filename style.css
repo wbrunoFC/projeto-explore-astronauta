@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    font-family: "Mulish", sans-serif;
+    font-size: 62.5%;
+
+    background: linear-gradient(90deg, rgba(52, 49, 147, 1) 0%, rgba(48, 44, 99, 1) 100%);
+
+    --font-color-principal: #B52184;
+    --font-color-secondary: #312D64;
+    --background-color-base: #F9F4FB;
+
+    body {
+        color: var(--font-color-secondary);
+
+        header {
+            background-color: var(--background-color-base);
+
+            #text-content {
+                h1 {
+                    color: var(--font-color-principal);
+                }
+            }
+
+            #seta {
+                animation: seta 1s infinite alternate;
+            }
+        }
+
+        main {
+            .card {
+                background-color: white;
+
+                h3 {
+                    color: var(--font-color-principal);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        #formulario {
+            background-color: var(--background-color-base);
+
+            h2 {
+                color: var(--font-color-principal);
+            }
+
+            .inputs {
+                input {
+                    border-radius: 1.6rem;
+                    border: 1.5px solid var(--font-color-secondary);
+                }
+
+                textarea {
+                    border-radius: 1.6rem;
+                    border: 1.5px solid var(--font-color-secondary);
+                    background-color: transparent;
+                }
+            }
+        }
+
+        footer {
+            font-family: "Mulish", sans-serif;
+            display: flex;
+            justify-content: center;
+            height: 7.8rem;
+            padding: 1.6rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.9rem;
+            color: white;
+        }
+    }
+}
+
+@media (width > 900px) {
+    body {
+
+        header,
+        #top-content {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+
+            #text-content {
+                margin-top: 20rem;
+
+                #text {
+                    h1 {
+                        font-size: 3.8rem;
+                        font-weight: 900;
+                    }
+
+                    p {
+                        font-size: 2.1rem;
+                        margin-bottom: 18rem;
+                    }
+                }
+
+                #seta {}
+            }
+        }
+
+        main {
+            display: flex;
+            gap: 6rem;
+            padding: 6.4rem 12rem;
+            justify-content: center;
+
+            .card {
+                padding: 3.2rem;
+                max-width: 32rem;
+                border-radius: 2.4rem;
+
+                h3 {
+                    font-size: 3rem;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 1.9rem;
+                }
+            }
+        }
+
+        #formulario {
+            display: flex;
+            justify-content: space-between;
+
+            form {
+                margin: 9.5rem 11.6rem;
+                width: 60rem;
+
+            }
+
+            h2 {
+                font-size: 4.2rem;
+                font-weight: 900;
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+                margin-top: 3rem;
+
+                input {
+                    width: 100%;
+                    padding: 12px 16px;
+                    background-color: transparent;
+
+                }
+
+                ::placeholder {
+                    color: var(--font-color-secondary);
+                    font-family: "Mulish", sans-serif;
+                    font-size: 1.6rem;
+                }
+
+                input[type="text"] {
+                    background: url(./assets/icon-user.svg) no-repeat;
+                    background-position: calc(100% - 98%) center;
+                    padding-left: 40px;
+                }
+
+                input[type="email"] {
+                    background: url(./assets/icon-arroba.svg) no-repeat scroll;
+                    background-position: calc(100% - 98%) center;
+                    padding-left: 40px;
+                }
+
+                textarea {
+                    padding: 12px;
+                    height: 9.8rem;
+                    width: 100%;
+                }
+            }
+
+            button {
+                color: white;
+                background: linear-gradient(90deg, rgba(52, 49, 147, 1) 0%, rgba(48, 44, 99, 1) 100%);
+                border: 0;
+                margin-top: 2.4rem;
+                border-radius: 1.6rem;
+                cursor: pointer;
+                padding: 1.6rem;
+                font-family: "Mulish", sans-serif;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (width < 900px) {
+    body {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #astronauta {
+                max-width: 36.4rem;
+                max-height: auto;
+            }
+
+            #text-content {
+                margin-top: 1.7rem;
+
+                h1 {
+                    font-size: 3.2rem;
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: 2.0rem;
+                    margin-bottom: 3.5rem;
+                }
+            }
+
+            #seta {
+                margin-bottom: 9.3rem;
+            }
+        }
+
+        main {
+            margin: 5.2rem 3.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4.9rem;
+
+            .card {
+                padding: 2.6rem;
+                border-radius: 1.9rem;
+
+                img {
+                    max-width: 8.0rem;
+                    height: 8.0rem;
+                    margin-bottom: 3.3rem;
+                }
+
+                h3 {
+                    font-size: 2.0rem;
+                    max-width: 26.5rem;
+                }
+
+                p {
+                    max-width: 26.5rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin-top: .5rem;
+                }
+            }
+        }
+
+        #formulario {
+            padding: 7.8rem 4.0rem;
+            height: 56.5rem;
+
+            h2 {
+                font-size: 3.2rem;
+                font-weight: 900;
+                margin-bottom: 4.3rem;
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+
+                input {
+                    width: 34rem;
+                    padding: 12px 16px 12px 14px;
+
+                }
+
+                input[type="text"] {
+                    background: url(./assets/icon-user.svg) no-repeat;
+                    background-position: calc(100% - 98%) center;
+                    padding-left: 40px;
+                }
+
+                input[type="email"] {
+                    background: url(./assets/icon-arroba.svg) no-repeat scroll;
+                    background-position: calc(100% - 98%) center;
+                    padding-left: 40px;
+                }
+
+                ::placeholder {
+                    color: var(--font-color-secondary);
+                    font-family: "Mulish", sans-serif;
+                    font-size: 1.6rem;
+                }
+
+                textarea {
+                    padding: 12px;
+                    height: 9.8rem;
+                    width: 34rem;
+                }
+            }
+
+            button {
+                color: white;
+                background: linear-gradient(90deg, rgba(52, 49, 147, 1) 0%, rgba(48, 44, 99, 1) 100%);
+                border: 0;
+                margin-top: 2.4rem;
+                border-radius: 1.6rem;
+                cursor: pointer;
+                padding: 1.6rem;
+                font-family: "Mulish", sans-serif;
+                font-size: 16px;
+            }
+
+            img {
+                display: none;
+            }
+        }
+
+        footer {
+            font-family: "Mulish", sans-serif;
+            display: flex;
+            width: 43rem;
+            height: 7.8rem;
+            padding: 1.6rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.9rem;
+            color: white;
+        }
+    }
+}
+
+@keyframes seta {
+    0% {
+        transform: translateY(30px)
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
